@@ -1,6 +1,11 @@
 var gulp = require('gulp'),//подключаю плагин gulp
 	less = require('gulp-less'), //подключаю плагин gulp-less для компиляции less
-	watch = require('gulp-watch');//подключаю плагин gulp-watch
+	watch = require('gulp-watch'),//подключаю плагин gulp-watch
+	gifsicle = require('imagemin-gifsicle'),//подключаю плагин gulp-imagemin
+	imagemin = require('gulp-imagemin'),//подключаю все плагины imagemin
+	mozjpeg = require('imagemin-mozjpeg'),
+	optipng = require('imagemin-optipng'),
+	svgo = require('imagemin-svgo');
 	
 gulp.task('less', function(){//создаю задачу, которая вызывается при помощи команды gulp less и содержит функцию
 	return gulp.src('app/less/*.less')//получаем источник с помощью gulp.src
@@ -15,4 +20,21 @@ gulp.task('watch', function(){//задача, вызываемая команд�
 gulp.task('tellless', function(){//задача вызывается методом watch и выводит на консоль информацию о том, что Less был изменен
 	console.log('Less has been changed')
 	return gulp.src('*.less')
+});
+
+gulp.task('images', function(){
+	return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')//находит источники в указанной папке с указанными расширениями
+	.pipe(imagemin(//запускает плагин imagemin
+		[
+		gifsicle({interlaced: true}),//методы сжимают gif, jpeg, png и svg форматы соответственно
+		mozjpeg({quality: 75, progressive: true}),
+		optipng({optimizationLevel: 5}),
+		svgo({
+			plugins: [
+			{removeViewBox: true},
+			{cleanupIDs: false}
+			]  
+		}) 
+	]))
+	.pipe(gulp.dest('dist/images'))//результат помещается в папку dist/images
 });
