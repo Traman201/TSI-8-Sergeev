@@ -179,7 +179,7 @@ footer {
       margin-left: 35%;
       margin-bottom:5%;
 }
-}
+
 
 @media (max-width: 1024px) and (min-width: 768px){
 	.container {         
@@ -331,6 +331,7 @@ footer {
 }
 .podpis{
 	opacity: 0;
+}
 }
 
 

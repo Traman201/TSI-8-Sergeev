@@ -6,6 +6,10 @@ var gulp = require('gulp'),//подключаю плагин gulp
 	mozjpeg = require('imagemin-mozjpeg'),
 	optipng = require('imagemin-optipng'),
 	svgo = require('imagemin-svgo');
+	var useref = require('gulp-useref');//Подключаю плагины для сжатия js, css и для их оптимизации
+	var uglify = require('gulp-uglify');
+	var cssnano = require('gulp-cssnano');
+	var gulpIf = require('gulp-if'); 
 	
 gulp.task('less', function(){//создаю задачу, которая вызывается при помощи команды gulp less и содержит функцию
 	return gulp.src('app/less/*.less')//получаем источник с помощью gulp.src
@@ -37,4 +41,13 @@ gulp.task('images', function(){
 		}) 
 	]))
 	.pipe(gulp.dest('dist/images'))//результат помещается в папку dist/images
+});
+
+
+gulp.task('useref', function(){
+	return gulp.src('app/*.html')//находит hrml документ
+	.pipe(useref())//ищет комментарии в html-документе, которые сообщают о том, что надо сжать
+	.pipe(gulpIf('*.js', uglify()))//сжимает js файл
+	.pipe(gulpIf('*.css', cssnano()))//сжимает css файл
+	.pipe(gulp.dest('dist'))//результат помещается в папку dist
 });

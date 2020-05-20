@@ -115,7 +115,7 @@ jQuery("document").ready(function($){
     $('#js-send-button').attr('disabled', true);//при загрузке страницы кнопка отправить неактивна
     $('#js-modalcheck-privacypolicy, #js-modalcheck-agreement').click(function(){//при нажатии на любой из чекбоксов
      if($('#js-modalcheck-privacypolicy').is(':checked') && $('#js-modalcheck-agreement').is(':checked')){//проверяется, выбраны ли они оба
-          $('#js-send-button').attr('disabled', false);//если да, то кнопка "Отправить становится активна
+          $('#js-send-button').attr('disabled', false);//если да, то кнопка "Отправить" становится активна
      }
      else{
         $('#js-send-button').attr('disabled', true);//если нет, то она становится неактивна
