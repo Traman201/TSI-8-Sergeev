@@ -51,3 +51,6 @@ gulp.task('useref', function(){
 	.pipe(gulpIf('*.css', cssnano()))//сжимает css файл
 	.pipe(gulp.dest('dist'))//результат помещается в папку dist
 });
+
+gulp.task('default', //вызывается при вводе gulp
+	gulp.series('less', 'images', 'useref')); //запускает указанные задачи по очереди
