@@ -1,0 +1,22 @@
+{
+  "name": "lab-8",
+  "version": "1.0.0",
+  "description": " Package for laba 8 TSI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "D:/Панель быстрого доступа/Рабочий стол/ТСИ/8/Lab 8/.git/"
+  },
+  "keywords": [
+    "laba"
+  ],
+  "author": "Sergeev Roman",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
+  }
+}

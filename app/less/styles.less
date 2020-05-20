@@ -1,0 +1,78 @@
+@buttoncolor: #7FFF00;
+@pagecolor: #FFFACD;
+.ButtonHover{
+	color: #FF0000;
+	border: 2px dashed fadeout(black, 85%);
+	background-color: desaturate(@buttoncolor, 30%);
+	cursor: pointer;
+}
+.NiceButtons(@radius){
+	border-radius: @radius;
+	color: black;
+	border: 2px dashed black;
+	&:hover{
+		.ButtonHover;
+	}
+}
+.NiceHypertext{
+	&:link{
+		 color: #0000CD; 
+  		 border-bottom: 1px dashed;
+	}
+	&:visited{
+		color: #FF4500;
+	}
+	&:hover{
+		color: #154088; 
+ 	        border-bottom: .07em solid
+	}
+	&:active{
+		color: #497DDD; 
+  		border-bottom: 1px dashed;
+	}
+}
+body{
+	background-color: @pagecolor;
+}
+.menu {
+	float: right;
+	width: 55vw;
+	li{
+		display: inline-block;
+		float: left;
+		a{
+			text-transform: uppercase;
+			text-decoration: none;
+			.NiceButtons(35px);
+			padding: 25px;	
+			width: 18vw;
+		}
+	}
+}
+
+.bookmark{
+	.NiceButtons(36px);
+	padding: 5px;
+}
+.added{
+	.ButtonHover;
+	&:hover{
+		background-color: transparent;
+	}
+}
+.bookmark1{
+	width: 20vw;
+	height: 1vh;
+	margin: 20px;
+}
+.logo{
+	.NiceButtons(35px);
+	border: transparent;
+	
+}
+a{
+	.NiceHypertext;
+}
+#js-more-about{
+	.NiceButtons(30px);
+}

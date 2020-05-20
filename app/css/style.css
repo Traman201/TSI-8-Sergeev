@@ -1,0 +1,351 @@
+/* Общие стили */
+* {
+	margin: 0;
+	padding: 0;
+}
+article, figure, footer, header, nav, section {display: block;}
+ul {
+	list-style: none;
+}
+
+/* Шапка */
+header {
+	width: 100%;
+	margin-bottom: 30px;
+	position: relative;
+	height: 70px;
+}
+/* Меню*/
+
+.backup{
+   height: 0px;
+   opacity: 0;
+}
+.backup-active{
+    height: 136px;
+    opacity: 0;
+
+}
+
+.mainmenu{
+    margin-bottom: 15%;
+    height: 72px;
+}
+.menu-fixed{
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    top: 0px;
+    height: 15%;
+    background-color: #FFE4B5;
+}
+
+
+
+
+/* Основное содержимое */
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+	
+}
+
+/* Футер */
+footer {
+	margin-top: 0px;
+	height: 70px;
+	line-height: 70px;
+	left:0px;
+	bottom:0px;
+	clear:both;
+}
+.col-three {
+	width: 50%;
+	height: 3vh%;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	line-height:80%;
+	margin-top:2.5vh;
+}
+.massiv{
+	font-size: xx-large;
+	margin-bottom:70px;
+	background-color: #20B2AA;
+	padding: 2vw;
+	border-radius: 150px/75px;
+	
+}
+.massiv:hover{
+	background-color: #7FFF00;
+}
+.articel{
+	margin-top:10vw;
+}
+.totherigth{
+	margin-bottom: 5vw;
+}
+.pic{
+	float:left;
+	width: auto;
+	height: inherit;
+	margin-left: 17.5%;
+}
+.notright{
+	clear:both;
+	margin-top: 35vw;
+}
+.picc{
+	align: right;
+	margin-left: 80%;
+	padding: 15vw;
+	width: 15vw;
+	heigth: 5vw;
+	
+}
+.picc:hover{
+	background-image: url(mass.jpg);
+}
+
+
+
+.articelheader{
+	margin-left: 35%;
+	margin-bottom: 2vw;
+	margin-top: 3vw;
+}
+.clear {
+  clear: both;
+}
+
+#CreateYourMassiv{
+	margin-left: 20%;
+	margin-top: 15%;
+}
+
+.color1{
+	color:red;
+}
+.color2{
+	color:blue;
+}
+.color3{
+	color: green;
+}
+.colort1{
+	background-color:red;
+}
+.colort2{
+	background-color:blue;
+}
+.colort3{
+	background-color: green;
+}
+.bookmark-list{
+	 margin-top: 4vh;
+	 margin-left:2vw;
+}
+
+.bookmark {
+     color: #00AC6B;
+}
+.modal{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal.active{
+   background-color: #C0C0C0;
+   opacity: 1;
+   visibility: visible;
+   border: 12px inset #000000;
+
+}\
+.modalcheck{
+    display: block;
+  }
+
+.more-about{
+     opacity: 0;
+      visibility: hidden;
+}
+.more-about.active{
+     opacity: 1;
+      visibility: visible;
+      margin-left: 35%;
+      margin-bottom:5%;
+}
+}
+
+@media (max-width: 1024px) and (min-width: 768px){
+	.container {         
+	max-width: 90%;    
+	} 
+  
+	.col-three {     
+    	float: none;      
+		width: 100%;   
+		text-align: center;     
+	} 
+	.pic {
+		width: 59vw;
+		margin-left: 1.5vw;
+	}
+	.pic img{
+		width: 58vw;
+	}
+
+	.menu li {
+		width: 5 vw;
+		display: inline-block;
+		/*margin-right: 55vw;*/
+	}
+	.menu a {
+		border-radius: 6 vw/3 vw;
+		text-transform: uppercase;
+		color: black;
+		font-size: 1.8vh;
+	}
+	.massiv{
+		margin-bottom: 25px;
+	}
+	.articel{
+		margin-top: 20vh;
+	}
+	nav{
+		margin-top: 7vh;
+	}
+	.articelheader{
+		margin-left: 7vw;
+	}
+	.col-three a{
+		text-align: center;
+	}
+	.modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 768px) and (min-width: 480px){
+.container {         
+	max-width: 90%;    
+	} 
+  
+	.col-three {     
+    	float: none;      
+		width: 100%;   
+		text-align: center;     
+	} 
+	.pic {
+		width: 60vw;
+		margin-left: 4vw;
+	}
+	.pic img{
+		width: 58vw;
+	}
+	.logo {
+		width: 2 vw;
+		padding: 5px;
+		
+	}
+	.menu li {
+		width: 5 vw;
+		display: block;
+		margin-right: 55vw;
+	}
+	.menu a {
+		border-radius: 6 vw/3 vw;
+		text-transform: uppercase;
+		color: black;
+		font-size: 1.8vh;
+	}
+	.massiv{
+		margin-bottom: 25px;
+	}
+	.articel{
+		margin-top: 31vh;
+	}
+	nav{
+		margin-top: 7vh;
+	}
+	.articelheader{
+		margin-left: 7vw;
+	}
+	.col-three a{
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) { /* Ширину класса container делаем резиновой */   
+	.container {         
+	max-width: 90%;    
+	} 
+	/* Расположение блоков в footer делаем в одну колонку */     
+	.col-three {     
+    	float: none;      
+		width: 100%;   
+		text-align: center;     
+	} 
+	.pic {
+		width: 85vw;
+		margin-left: 8.9vw;
+	}
+	.pic img{
+		width: 80vw;
+	}
+	.logo {
+		width: 2 vw;
+		padding: 5px;
+		
+	}
+	.menu li {
+		width: 5 vw;
+	}
+	.menu a {
+		border-radius: 6 vw/3 vh;
+		text-transform: uppercase;
+		color: black;
+		font-size: 3.3vh;
+	}
+	.massiv{
+		margin-bottom: 25px;
+	}
+	.articel{
+		margin-top: 15vh;
+	}
+	nav{
+		margin-top: 7vh;
+	}
+	.articelheader{
+		margin-left: 7vw;
+	}
+	.col-three a{
+		text-align: center;
+}
+.podpis{
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

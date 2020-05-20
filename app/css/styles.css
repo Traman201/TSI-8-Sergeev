@@ -1,0 +1,111 @@
+.ButtonHover {
+  color: #FF0000;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background-color: #7fd926;
+  cursor: pointer;
+}
+.NiceHypertext:link {
+  color: #0000CD;
+  border-bottom: 1px dashed;
+}
+.NiceHypertext:visited {
+  color: #FF4500;
+}
+.NiceHypertext:hover {
+  color: #154088;
+  border-bottom: 0.07em solid;
+}
+.NiceHypertext:active {
+  color: #497DDD;
+  border-bottom: 1px dashed;
+}
+body {
+  background-color: #FFFACD;
+}
+.menu {
+  float: right;
+  width: 55vw;
+}
+.menu li {
+  display: inline-block;
+  float: left;
+}
+.menu li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 35px;
+  color: black;
+  border: 2px dashed black;
+  padding: 25px;
+  width: 18vw;
+}
+.menu li a:hover {
+  color: #FF0000;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background-color: #7fd926;
+  cursor: pointer;
+}
+.bookmark {
+  border-radius: 36px;
+  color: black;
+  border: 2px dashed black;
+  padding: 5px;
+}
+.bookmark:hover {
+  color: #FF0000;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background-color: #7fd926;
+  cursor: pointer;
+}
+.added {
+  color: #FF0000;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background-color: #7fd926;
+  cursor: pointer;
+}
+.added:hover {
+  background-color: transparent;
+}
+.bookmark1 {
+  width: 20vw;
+  height: 1vh;
+  margin: 20px;
+}
+.logo {
+  border-radius: 35px;
+  color: black;
+  border: 2px dashed black;
+  border: transparent;
+}
+.logo:hover {
+  color: #FF0000;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background-color: #7fd926;
+  cursor: pointer;
+}
+a:link {
+  color: #0000CD;
+  border-bottom: 1px dashed;
+}
+a:visited {
+  color: #FF4500;
+}
+a:hover {
+  color: #154088;
+  border-bottom: 0.07em solid;
+}
+a:active {
+  color: #497DDD;
+  border-bottom: 1px dashed;
+}
+#js-more-about {
+  border-radius: 30px;
+  color: black;
+  border: 2px dashed black;
+}
+#js-more-about:hover {
+  color: #FF0000;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background-color: #7fd926;
+  cursor: pointer;
+}
