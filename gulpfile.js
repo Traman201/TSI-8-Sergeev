@@ -22,18 +22,7 @@ gulp.task('watch', function(){//задача, вызываемая команд�
 	gulp.watch('app/less/*.less', gulp.series(['tellless']))//метод watch следит за изменениями файлов, которые указаны в качестве первого аргумента и, если находит изменения, вызывает задачу, указанную во втором аргументе
 });
 gulp.task('tellless', function(){//задача вызывается методом watch и выводит на консоль информацию о том, что Less был изменен
-	console.log('Less has been changed')
-	return gulp.src('*.less')
-});
 
-gulp.task('images', function(){
-	return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')//находит источники в указанной папке с указанными расширениями
-	.pipe(imagemin(//запускает плагин imagemin
-		[
-		gifsicle({interlaced: true}),//методы сжимают gif, jpeg, png и svg форматы соответственно
-		mozjpeg({quality: 75, progressive: true}),
-		optipng({optimizationLevel: 5}),
-		svgo({
 			plugins: [
 			{removeViewBox: true},
 			{cleanupIDs: false}
